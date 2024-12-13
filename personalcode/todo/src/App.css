@@ -1,0 +1,271 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f6f9;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+}
+
+.title {
+  color: #646681;
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 2rem auto 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+/* Button Styles */
+button {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add_task {
+  background: linear-gradient(135deg, #646ff0, #4e54c8);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add_task:hover {
+  background: linear-gradient(135deg, #4e54c8, #646ff0);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.add_task:active {
+  background: #4e54c8;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-danger {
+  background-color: #ff4d4d;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-danger:hover {
+  background-color: #ff3333;
+}
+
+/* Dropdown Styles */
+.dropbtn {
+  background-color: #646ff0; /* Consistent with add_task button */
+  color: white;
+  padding: 0.8rem 1.6rem; /* Match padding with buttons */
+  font-size: 1.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Match button shadow */
+}
+
+.dropbtn:hover {
+  background-color: #4e54c8; /* Slightly darker for hover effect */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 0.8rem 1.6rem; /* Match padding with buttons */
+  text-decoration: none;
+  display: block;
+  font-size: 1.6rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.selected {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+/* Todo List Styles */
+.todos {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+.todos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.todos li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Title Styles */
+.todos li .title {
+  flex: 1;
+  text-align: left;
+  margin-right: 1rem; /* Space between title and actions */
+}
+
+/* Actions Container */
+.todos li .actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Custom Checkbox Styles */
+.todos input[type='checkbox'] {
+  width: 2.4rem; /* Match size with buttons */
+  height: 2.4rem; /* Match size with buttons */
+  cursor: pointer;
+  appearance: none; /* Hide default checkbox appearance */
+  background: white;
+  border: 2px solid #646ff0;
+  border-radius: 6px;
+  position: relative;
+  transition: background 0.3s, border-color 0.3s;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.todos input[type='checkbox']:checked {
+  background: #646ff0;
+  border-color: #646ff0;
+}
+
+.todos input[type='checkbox']:checked::after {
+  content: '\f00c'; /* Font Awesome checkmark icon */
+  font-family: 'Font Awesome 5 Free'; /* Font Awesome font */
+  font-weight: 900; /* Required for Font Awesome icons */
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem; /* Adjusted to fit within the checkbox */
+}
+
+/* Modal and Edit Container Styles */
+.modal_container,
+.edit_container {
+  background-color: #ecedf6;
+  width: 80%;
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Changed to fixed for better positioning */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.edit_container {
+  margin-top: 2rem;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500; /* Consistent with button font weight */
+}
+
+input[type='text'],
+select {
+  padding: 0.8rem 1.6rem; /* Match padding with buttons */
+  font-size: 1.6rem; /* Match font size with buttons */
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px; /* Match border radius with buttons */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Consistent box-shadow with buttons */
+}
+
+input[type='text']:focus,
+select:focus {
+  border-color: #646ff0;
+  outline: none;
+}
+
+/* Icon Styles */
+button i {
+  font-size: 1.6rem; /* Match the button font size */
+  color: white;
+}
+
+/* Cancel Button Styles */
+.cancel {
+  background-color: #ff4d4d; /* Same color as btn-danger */
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cancel:hover {
+  background-color: #ff3333;
+}

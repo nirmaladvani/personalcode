@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  padding: 40px;
+}
+
+.form-container {
+  width: 31.19%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-floating {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login-container {
+  border: 1px solid rgba(219, 219, 219);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 30px 45px; */
+  width: 100%;
+}
+
+.login-container img {
+  object-fit: scale-down;
+}
+
+.img-container {
+  margin-left: 42px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(219, 219, 219);
+}
+
+.separator:not(:empty)::before {
+  margin-right: 0.25em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: 0.25em;
+}
+
+.signup-container {
+  border: 1px solid rgba(219, 219, 219);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 30px 45px; */
+  width: 100%;
+}
+/* 
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  border: 1px solid rgba(219, 219, 219);
+}
+
+.signup-container {
+  border: 1px solid rgba(219, 219, 219);
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(219, 219, 219);
+}
+
+.separator:not(:empty)::before {
+  margin-right: 0.25em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: 0.25em;
+}
+
+.login-fb {
+  color: #385185;
+} */

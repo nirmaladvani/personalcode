@@ -1,0 +1,29 @@
+.container {
+  width: 300px;
+  border: 1px solid #555;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+label {
+  margin-bottom: 5px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 20px;
+}
+
+button {
+  margin-bottom: 10px;
+  width: 308px;
+  height: 30px;
+}
+
+.field {
+  width: 100%;
+}
